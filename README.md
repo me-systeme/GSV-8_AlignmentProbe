@@ -1,6 +1,6 @@
 # Alignment Viewer – Real-Time ASTM E1012 Bending & Alignment Visualization
 
-## Introduction
+## 📌 Introduction
 
 **Alignment Viewer** is a Windows application designed to support mechanical testing according to **ASTM E1012**.  
 The software communicates with a **ME-Systeme GSV-8** amplifier (via `MEGSV86x64.dll`) and provides real-time visualization of axial strain and bending strain for two orthogonal measurement planes.
@@ -13,43 +13,47 @@ It is intended for:
 - R&D involving bending, straightness, or offset analyses  
 - Any workflow requiring live strain-gauge–based bending vector visualization  
 
+<figure>
+  <img src="screenshots/maininterface.png" alt="Main UI">
+  <figcaption>Figure 1: The Alignment Viewer main interface.</figcaption>
+</figure>
 
 ---
 
-## Features
+## ✨ Features
 
-### Real-Time Data Acquisition
+### 🔧 Real-Time Data Acquisition
 - Reads **8 strain gauge channels** at **50 Hz** (default, is configurable)
 - High-performance streaming via `GSV86readMultiple`
 - Automatic buffer clearing on errors
 - Clean device initialization and safe shutdown
 
-### Live Visualization
+### 📈 Live Visualization
 - Two polar plots: **Plane A** and **Plane B**
 - Real-time bending vector (ε_bx, ε_by)
 - Dynamic color coding based on ASTM alignment classes
 - Smooth auto-scaling of the bending radius
 - Optional fixed-radius mode
 
-### Alignment Calculations
+### 📊 Alignment Calculations
 - Axial strain (ε_ax)  
 - Bending strain magnitude (|ε_b|)  
 - Bending direction (φ in degrees)  
 - Percent bending  
 - ASTM alignment class assignment  
 
-### User Interface
+### 🖥️ User Interface
 - Modern, clean UI layout
 - Dedicated info boxes for both planes
 - Control panel for PNG export and view-adjustment
 - PNG export captures the entire UI (plots + info boxes)
 
-### Configuration Options
+### ⚙️ Configuration Options
 - Fully configurable via **YAML**
 - Live adjustments through **View Settings** dialog
 - External YAML overrides bundled embedded configuration
 
-### Windows EXE Support
+### 💼 Windows EXE Support
 - Can be compiled as a **single-file EXE**
 - Includes Python, dependencies, YAML (default), and DLL
 - No Python installation required on the end-user machine  
@@ -57,7 +61,7 @@ It is intended for:
 
 ---
 
-# Getting Started
+# 🚀 Getting Started
 
 In order to start up the Alignment Viewer you can download a zip file of the repository with the following link: https://github.com/me-systeme/GSV-8_AlignmentProbe/archive/refs/heads/main.zip. If you have git installed you can also copy the repository in your working directory with
 
@@ -71,10 +75,12 @@ git clone https://github.com/me-systeme/GSV-8_AlignmentProbe.git
 Make sure your working directory contains:
 
 ```yaml
+\screenshots
 alignment_viewer.py
 axial_bending.py
 alignment_config.yaml
 MEGSV86x64.dll
+build_alignment_exe.bat
 README.md
 ```
 
@@ -82,8 +88,6 @@ README.md
 If built as an EXE, PyInstaller bundles the necessary resources. 
 You can find the latest version of the Windows DLL here: https://www.me-systeme.de/de/software/megsv86.
 
-
----
 
 ## Running from Source
 
@@ -98,7 +102,7 @@ Run the program:
 python alignment_viewer.py
 ```
 
-# Configuration
+# ⚙️ Configuration
 
 All parameters are stored in:
 
@@ -162,7 +166,7 @@ alignment_classes:
 
 The user may customize bending limits, class colors, and thresholds here.
 
-# Runtime Adjustments (View Settings)
+# 🛠️ Runtime Adjustments (View Settings)
 
 Inside the app, press:
 
@@ -173,11 +177,16 @@ You can modify:
 - Auto-scaling on/off
 - Fixed polar radius
 - Refresh interval
-- Number of DLL frames per read
+
+
+<figure>
+  <img src="screenshots/view_settings.png" alt="View Settings" width="250">
+  <figcaption>Figure 2: View Settings window.</figcaption>
+</figure>
 
 Changes apply immediately without restarting the application.
 
-# Building a Windows EXE
+# 📦 Building a Windows EXE
 
 ## 1. Install PyInstaller
 
@@ -233,7 +242,7 @@ alignment_config.yaml
 
 next to the EXE.
 
-# Notes for Developers
+# 🔧 Notes for Developers
 
 - Clean shutdown ensures `GSV86stopTX` and `GSV86release` are always called
 - ESC, Ctrl+Q, window close, and Ctrl+C all exit safely
