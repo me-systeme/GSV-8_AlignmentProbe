@@ -59,6 +59,13 @@ It is intended for:
 
 # Getting Started
 
+In order to start up the Alignment Viewer you can download a zip file of the repository with the following link: https://github.com/me-systeme/GSV-8_AlignmentProbe/archive/refs/heads/main.zip. If you have git installed you can also copy the repository in your working directory with
+
+```bash
+git clone https://github.com/me-systeme/GSV-8_AlignmentProbe.git
+```
+
+
 ## Folder Structure
 
 Make sure your working directory contains:
