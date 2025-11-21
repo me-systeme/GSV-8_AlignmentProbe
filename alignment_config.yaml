@@ -16,14 +16,19 @@ view:
   refresh_ms: 200           # GUI refresh in ms; at the same time corresponds to the cycle time for polling the measurement values using GSV86readMultiple
   mult_frames: 1000       # how many frames to pull at most per call (must be significantly larger than refresh_ms / sample period duration)
 
-# Assignment of channel numbers to the positions of the strain gauges:
+# Assignment of channel numbers to the positions of the strain gauges;
+# Horizontal axis in plot is proportional to difference of e0 - e180 "strain gauge 1 - strain gauge 3" (is proportional to Mz)
+# Vertical axis in plot is proportional to difference of e90 - e270 "strain gauge 2 - strain gauge 4" (is proportional to My)
 channels:
   section_map:
+    # Assignment of Strain gauges to Polar coordinates of 2D polar Plot
     A:
       e0: 1
       e90: 2
       e180: 3
       e270: 4
+# Horizontal axis in plot is proportional to difference of e0 - e180 "strain gauge 5 - strain gauge 7" (is proportional to Mz)
+# Vertical axis in plot is proportional to difference of e90 - e270 "strain gauge 6 - strain gauge 8" (is proportional to My)
     B:
       e0: 5
       e90: 6
