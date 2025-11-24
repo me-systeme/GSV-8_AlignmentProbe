@@ -188,10 +188,10 @@ Changes apply immediately without restarting the application.
 
 # 📦 Building a Windows EXE
 
-## 1. Install PyInstaller
+## 1. Install Packages
 
 ```bash
-pip install pyinstaller
+pip install pyinstaller pyqt6 pyqtgraph numpy pyyaml
 ```
 
 ## 2. Build the EXE
