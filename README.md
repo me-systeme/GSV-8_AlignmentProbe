@@ -1,8 +1,8 @@
-# Alignment Viewer – Real-Time ASTM E1012 Bending & Alignment Visualization
+# Alignment Probe – Real-Time ASTM E1012 Bending & Alignment Visualization
 
 ## 📌 Introduction
 
-**Alignment Viewer** is a Windows application designed to support mechanical testing according to **ASTM E1012**.  
+**Alignment Probe** is a Windows application designed to support mechanical testing according to **ASTM E1012**.  
 The software communicates with a **ME-Systeme GSV-8** amplifier (via `MEGSV86x64.dll`) and provides real-time visualization of axial strain and bending strain for two orthogonal measurement planes.
 
 It is intended for:
@@ -15,7 +15,7 @@ It is intended for:
 
 <figure>
   <img src="screenshots/maininterface.png" alt="Main UI">
-  <figcaption>Figure 1: The Alignment Viewer main interface.</figcaption>
+  <figcaption>Figure 1: The Alignment Probe main interface.</figcaption>
 </figure>
 
 ---
@@ -63,7 +63,7 @@ It is intended for:
 
 # 🚀 Getting Started
 
-In order to start up the Alignment Viewer you can download a zip file of the repository with the following link: https://github.com/me-systeme/GSV-8_AlignmentProbe/archive/refs/heads/main.zip. If you have git installed you can also copy the repository in your working directory with
+In order to start up the Alignment Probe you can download a zip file of the repository with the following link: https://github.com/me-systeme/GSV-8_AlignmentProbe/archive/refs/heads/main.zip. If you have git installed you can also copy the repository in your working directory with
 
 ```bash
 git clone https://github.com/me-systeme/GSV-8_AlignmentProbe.git
